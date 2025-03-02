@@ -35,55 +35,43 @@ export class SeedService implements OnModuleInit {
             username: 'user1',
             email: 'user1@example.com',
             password: 'password1',
-            preferences: {
-              favoriteGenres: ['Action', 'Drama'],
-              dislikedGenres: ['Romance'],
-            },
+            favoriteGenres: ['Action', 'Drama'],
+            dislikedGenres: ['Romance'],
           },
           {
             username: 'user2',
             email: 'user2@example.com',
             password: 'password2',
-            preferences: {
-              favoriteGenres: ['Action', 'Comedy'],
-              dislikedGenres: ['Horror'],
-            },
+            favoriteGenres: ['Action', 'Comedy'],
+            dislikedGenres: ['Horror'],
           },
           {
             username: 'user3',
             email: 'user3@example.com',
             password: 'password3',
-            preferences: {
-              favoriteGenres: ['Drama', 'Romance'],
-              dislikedGenres: ['SciFi'],
-            },
+            favoriteGenres: ['Drama', 'Romance'],
+            dislikedGenres: ['SciFi'],
           },
           {
             username: 'user4',
             email: 'user4@example.com',
             password: 'password4',
-            preferences: {
-              favoriteGenres: ['SciFi', 'Fantasy'],
-              dislikedGenres: ['Romance'],
-            },
+            favoriteGenres: ['SciFi', 'Fantasy'],
+            dislikedGenres: ['Romance'],
           },
           {
             username: 'user5',
             email: 'user5@example.com',
             password: 'password5',
-            preferences: {
-              favoriteGenres: ['Animation', 'Adventure'],
-              dislikedGenres: ['Romance'],
-            },
+            favoriteGenres: ['Animation', 'Adventure'],
+            dislikedGenres: ['Romance'],
           },
           {
             username: 'user6',
             email: 'user6@example.com',
             password: 'password6',
-            preferences: {
-              favoriteGenres: ['Crime', 'Thriller'],
-              dislikedGenres: ['Comedy'],
-            },
+            favoriteGenres: ['Crime', 'Thriller'],
+            dislikedGenres: ['Comedy'],
           },
         ]);
       } catch (error) {

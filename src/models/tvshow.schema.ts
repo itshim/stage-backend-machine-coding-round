@@ -28,3 +28,10 @@ export class TVShow {
 }
 
 export const TVShowSchema = SchemaFactory.createForClass(TVShow);
+
+TVShowSchema.index({
+  title: 'text',
+  description: 'text',
+  'episodes.director': 'text',
+  'episodes.actors': 'text',
+});

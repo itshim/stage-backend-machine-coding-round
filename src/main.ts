@@ -1,8 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ValidationPipe } from '@nestjs/common';
+import { BadRequestException, ValidationPipe } from '@nestjs/common';
 import 'reflect-metadata';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import * as cookieParser from 'cookie-parser';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -28,8 +29,17 @@ async function bootstrap() {
     new ValidationPipe({
       transform: true,
       whitelist: true,
+      exceptionFactory: (errors) => {
+        return new BadRequestException(
+          errors.map((err) => ({
+            field: err.property,
+            errors: Object.values(err.constraints),
+          })),
+        );
+      },
     }),
   );
-  await app.listen(3000);
+  app.use(cookieParser());
+  await app.listen(3001);
 }
 bootstrap();

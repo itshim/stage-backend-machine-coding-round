@@ -33,3 +33,10 @@ export class Movie {
 }
 
 export const MovieSchema = SchemaFactory.createForClass(Movie);
+
+MovieSchema.index({
+  title: 'text',
+  description: 'text',
+  director: 'text',
+  actors: 'text',
+});
